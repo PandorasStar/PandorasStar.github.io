@@ -16,7 +16,13 @@ A couple things that I had to figure out to set up the fastai course on windows 
 
 1. Download CUDA and pytorch, you'll most likely need a fresh install so just go and download it.
 2. You'll need to pip install graphviz and then actually go to the website and download the actual file, and another thing
-    a. the author dude Jeremy or whatever posted a tweet with a function definining gv, that will probably also need to be defined in the jupyter notebooks.
+    a. the author dude Jeremy or whatever posted a tweet with a function definining gv,
+
+    `import graphviz`
+    
+    `def gv(s): return graphviz.Source('digraph G{ rankdir="LR"' + s + '; }')`
+    
+    that will probably also need to be defined in the jupyter notebooks.
        otherwise you wont have any pretty pictures. (ill verify this with next lessons)
     b. i'll be storing the "dirty" files in a dirty folder and I'll pull the "clean" lessons out and place them in that folder. ill most likely do that after the intro.
 3. Oh and the metrics that should display after training a program dont show up in visual code, and then checking if its a cat also doesn't work. Most likely we'll stick to 
